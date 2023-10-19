@@ -1,0 +1,422 @@
+body {
+    background-color: #720418;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+/* Logo Path  */
+
+main .logo {
+    justify-self: flex-start;
+}
+main .logo img {
+    margin-top: 75px;
+    margin-left: 35px;
+}
+
+/* Join Path  */
+
+main .join {
+    justify-self: center;
+    margin: auto;
+    width: 662px;
+    height: 544.311px;
+}
+
+main .join .join-path {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+}
+
+
+main .join .join-path h1 {
+    color: #000;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 69px 129px 18px;
+    width: 404px;
+    height: 81px;
+}
+
+main .join .join-path form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 34px;
+}
+
+main .join .join-path form input {
+    border: 1px solid #CECECE;
+    border-radius: 5px;
+    background: #FFF;
+    padding: 20px 15px;
+    width: 450px;
+}
+
+::placeholder {
+    color: #797667;
+    font-family: Crimson Text;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+main .join .join-path .btn {
+    border-radius: 5px;
+    border: 1px solid #CECECE;
+    background: #E16A00;
+    color: #FFF;
+    text-align: center;
+    font-family: Crimson Text;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 480px;
+    padding: 15px;
+    margin: 50px 54px 34px;
+}
+
+/* Responsiveness  */
+
+@media (min-width: 993px) and (max-width: 1125px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+    }
+    
+    /* Logo Path  */
+    
+    main .logo img {
+        margin-top: 55px;
+        margin-left: 30px;
+    }
+    
+    /* Join Path  */
+    
+    main .join {
+        justify-self: center;
+        margin: auto;
+        width: 562px;
+        height: 500px; 
+    }
+    
+    main .join .join-path h1 {
+        color: #000;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 60px 110px 27px;
+        width: 350px;
+        height: 78px;
+    }
+    
+    main .join .join-path form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    
+    main .join .join-path form input {
+        border: 1px solid #CECECE;
+        border-radius: 5px;
+        background: #FFF;
+        padding: 20px 15px;
+        width: 400px;
+    }
+
+    
+    main .join .join-path .btn {
+        border-radius: 5px;
+        border: 1px solid #CECECE;
+        background: #E16A00;
+        color: #FFF;
+        text-align: center;
+        font-family: Crimson Text;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 435px;
+        padding: 15px;
+        margin: 45px 54px 34px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+    
+    /* Logo Path  */
+
+    main .logo img {
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    
+    /* Join Path  */
+    
+    main .join {
+        justify-self: center;
+        margin: auto;
+        width: 462px;
+        height: 450px; 
+    }
+    
+    main .join .join-path h1 {
+        color: #000;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 50px 100px 25px;
+        width: 300px;
+        height: 76px;
+    }
+    
+    main .join .join-path form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    
+    main .join .join-path form input {
+        border: 1px solid #CECECE;
+        border-radius: 5px;
+        background: #FFF;
+        padding: 20px 15px;
+        width: 350px;
+    }
+    
+    main .join .join-path .btn {
+        border-radius: 5px;
+        border: 1px solid #CECECE;
+        background: #E16A00;
+        color: #FFF;
+        text-align: center;
+        font-family: Crimson Text;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 382px;
+        padding: 15px;
+        margin: 30px 54px 34px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 35px;
+    }
+    
+    /* Logo Path  */
+
+    main .logo img {
+        margin-top: 20px;
+        margin-left: 11px;
+    }
+    
+    /* Join Path  */
+    
+    main .join {
+        justify-self: center;
+        margin: auto;
+        width: 362px;
+        height: 400px; 
+    }
+    
+    main .join .join-path h1 {
+        color: #000;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 46px 80px 21px;
+        width: 250px;
+        height: 70px;
+    }
+    
+    main .join .join-path form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    
+    main .join .join-path form input {
+        border: 1px solid #CECECE;
+        border-radius: 5px;
+        background: #FFF;
+        padding: 20px 15px;
+        width: 250px;
+    }
+    
+    main .join .join-path .btn {
+        border-radius: 5px;
+        border: 1px solid #CECECE;
+        background: #E16A00;
+        color: #FFF;
+        text-align: center;
+        font-family: Crimson Text;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 282px;
+        padding: 15px;
+        margin: 27px 54px 34px;
+    }
+}
+
+@media (min-width: 391px) and (max-width: 500px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    
+    /* Logo Path  */
+    main .logo img {
+        margin-top: 15px;
+        margin-left: 11px;
+    }
+    
+    /* Join Path  */
+    
+    main .join {
+        justify-self: center;
+        margin: auto;
+        width: 300px;
+        height: 350px; 
+    }
+    
+    main .join .join-path h1 {
+        color: #000;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 40px 60px 20px;
+        width: 200px;
+        height: 68px;
+    }
+    
+    main .join .join-path form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    
+    main .join .join-path form input {
+        border: 1px solid #CECECE;
+        border-radius: 5px;
+        background: #FFF;
+        padding: 20px 15px;
+        width: 220px;
+    }
+
+    main .join .join-path .btn {
+        border-radius: 5px;
+        border: 1px solid #CECECE;
+        background: #E16A00;
+        color: #FFF;
+        text-align: center;
+        font-family: Crimson Text;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 251px;
+        padding: 15px;
+        margin: 23px 54px 34px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    main .logo img {
+        margin-top: 11px;
+        margin-left: 11px;
+    }
+
+    main .join {
+        justify-self: center;
+        margin: auto;
+        width: 250px;
+        height: 310px; 
+        
+    }
+
+    main .join .join-path form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    main .join .join-path h1 {
+        color: #000;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 27px 38px 15px;
+        width: 152px;
+        height: 64px;
+    }
+
+    main .join .join-path form input {
+        border: 1px solid #CECECE;
+        border-radius: 5px;
+        background: #FFF;
+        padding: 20px 15px;
+        width: 180px;
+    }
+
+    main .join .join-path .btn {
+        border-radius: 5px;
+        border: 1px solid #CECECE;
+        background: #E16A00;
+        color: #FFF;
+        text-align: center;
+        font-family: Crimson Text;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        width: 210px;
+        padding: 15px;
+        margin: 18px 54px 34px;
+    }
+}
