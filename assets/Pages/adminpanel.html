@@ -4,126 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel | Library Book Store</title>
+    <link rel="stylesheet" href="../Font/font.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/adminpanel.css">
-    <link rel="stylesheet" href="../assets/Font/font.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 <body>
-    <div class="admin-panel">
-            <div class="wrapper">
-                <div class="side-bar">
-                        <a href="/index.html" class="logo">
-                            <img src="../images/Logo.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="../images/T-admin-panel-photo.png">
-                            <span>Home</span>
-                        </a>
-                        <a href="#">
-                            <img src="../images/T-admin-panel-photo.png">
-                            <span>Books</span>
-                        </a>
-                        <a href="#">
-                            <img src="../images/T-admin-panel-photo.png">
-                            <span>About</span>
-                        </a>
-                        <a href="#">
-                            <img src="../images/T-admin-panel-photo.png">
-                            <span>Join</span>
-                        </a>
-                        <a href="#">
-                            <img src="../images/T-admin-panel-photo.png">
-                            <span>Contact</span>
-                        </a>
-                        <a href="#">
-                            <img src="../images/T-admin-panel-photo.png">
-                            <span>Logout</span>
-                        </a>
-
-                       
-                </div>
-            </div>
-        <div class="main-content">
-            <div class="content">
-                <div class="admin-icons">
-                    <img src="../images/T-admin-icons.png">
-                    <span>Admin</span>  
-                </div>
-                <section class="section1">
-                    <h2>Home</h2>
-                    <p>Search book</p>
-                    <input type="text">
-                    <button class="btn1"><i class="fa-solid fa-magnifying-glass"></i></button>                   
-                </section>
-                <section class="section2">
-                    <p>Book form</p>
-                    <div>
-                        <form id="form1" method="get">
-                            <label for="text">Book Name</label>
-                            <input type="text">
-                            <label for="text">Author Name</label>
-                            <input type="text">
-                            <label for="text">Book Image Url</label>
-                            <input type="text">
-                            <label for="text">Description</label>
-                            <input type="text">
-                            <label for="type">Book Type</label>
-                            <input type="text">
-                        </form>
-                        <button class="btn2" id="form1">Add</button>
-                    </div>
-                </section>
-                <section class="section3">
-                    <h2>About Store</h2>
-                    <div>
-                        <form id="form2" method="get">
-                            <label for="text">Title</label>
-                            <input type="text">
-                            <label for="text">Book Image Url</label>
-                            <input type="text">
-                            <label for="text">Description</label>
-                            <textarea></textarea>
-                        </form>
-                            <button class="btn3" id="form1">About info add</button>
-                    </div>
-                </section>
-                <section class="section4">
-                    <h2>Join Us</h2>
-                    <table>
-                        <tr class="title">
-                            <th>#</th>
-                            <th>Full Name</th>
-                            <th>Email Address</th>
-                        </tr>
-                    </table>
-                </section>
-                <section class="section5">
-                    <h2>Books</h2>
-                    <table>
-                        <tr class="title">
-                            <th>#</th>
-                            <th>Title</th>
-                            <th>Description</th>
-                            <th>Category</th>
-                            <th>Author</th>
-                        </tr>
-                    </table>
-                </section>
-                <section class="section6">
-                    <h2>Contact Us</h2>
-                    <table>
-                        <tr class="title">
-                            <th>#</th>
-                            <th>Full Name</th>
-                            <th>Address</th>
-                            <th>Email Address</th>
-                            <th>Phone Number</th>
-                        </tr>
-                    </table>
-                </section>
-            </div>
+  <div class="admin">
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="../images/Logo.png" alt="" />
         </div>
+        <div class="menu">
+          <ul id="navMenu">
+            <li>
+              <a href="#home"><img src="../images/T-admin-panel-photo.png" alt="" /></a>Home</li>
+            <li>
+              <a href="#books"><img src="../images/T-admin-panel-photo.png" alt="" /></a>Books</li>
+            <li>
+              <a href="#about"><img src="../images/T-admin-panel-photo.png" alt="" /></a>About</li>
+            <li>
+              <a href="#joinus"><img src="../images/T-admin-panel-photo.png" alt="" /></a>Join Us</li>
+            <li>
+              <a href="#contact"><img src="../images/T-admin-panel-photo.png" alt="" /></a>Contact</li>
+            <li  class="logOut">
+              <a href="/index.html">
+                  <img src="../images/T-admin-panel-photo.png" alt="" /></a>Logout</li>
+          </ul>
+        </div>
+      </div>
     </div>
+    <div class="admin_panel">
+      <div class="admin_icon">
+        <i class="fa-regular fa-user"></i>
+        <span>Admin</span>
+      </div>
+
+      <nav class="mobile_menu" id="open">
+        <div class="mobile_header">
+          <img src="../image/T-admin-panel-logo.png" alt="" />
+          <a href="../pages/"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+        <ul>
+          <li><img src="../image/T-admin-panel-photo.png" alt="" /><a href="#home"></a>Home</li>
+          <li><a href="#books"><img src="../image/T-admin-panel-photo.png" alt="" /></a>Books</li>
+          <li><a href="#about"><img src="../image/T-admin-panel-photo.png" alt="" /></a>About</li>
+          <li><a href="#joinus"><img src="../image/T-admin-panel-photo.png" alt="" /></a>Join Us</li>
+          <li><a href="#contact"><img src="../image/T-admin-panel-photo.png" alt="" /></a>Contact</li>
+          <li class="logOut"><a href="./admin-login.html"><img src="../image/T-admin-panel-photo.png" alt=""/></a>Logout</li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <img src="./assets/image/mobillogo.svg" alt="" />
+        <a href="#open"><i class="fa-solid fa-bars"></i></a>
+      </div>
+
+      <div class="search_section" id="home">
+        <h2>Add book</h2>
+        <h3>Search book</h3>
+
+        <div class="search">
+          <input type="text" placeholder="Dan Brown"  id="searchGoogleInput"/>
+          <i class="fa-solid fa-magnifying-glass" id="makeSearchGoogle"></i>
+        </div>
+
+<!--         -------- Search divi-->
+        <div class="search_result" id="searchResult">
+          <div class="result">
+            <i class="fa-regular fa-clock"></i>
+            <p>Derek C. Glissmann Eli...</p>
+          </div>
+          <div class="result">
+            <i class="fa-regular fa-clock"></i>
+            <p>Derek C. Glissmann Eli...</p>
+          </div>
+          <div class="result">
+            <i class="fa-regular fa-clock"></i>
+            <p>Derek C. Glissmann Eli...</p>
+          </div>
+          <div class="result">
+            <i class="fa-regular fa-clock"></i>
+            <p>Derek C. Glissmann Eli...</p>
+          </div>
+          <div class="result">
+            <i class="fa-regular fa-clock"></i>
+            <p>Derek C. Glissmann Eli...</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="book_info" id="books">
+        <div class="head">
+          <h4>Book form</h4>
+        </div>
+        <form id="bookForm">
+          <label for="bName">Book Name</label>
+          <input type="text"  id="bName"/>
+          <label for="aName">Author Name</label>
+          <input type="text"  id="aName" />
+          <label for="Burl">Book Image Url</label>
+          <input type="text"  id="Burl" />
+          <label for="dscrptn">Description</label>
+          <textarea id="dscrptn"></textarea>
+          <span><label for="bCategory">Book Category</label> <button type="button" id="showCategory">+</button>
+            <span class="catUp">
+              <label for="categoryName">Add Category</label>
+              <input type="text" id="categoryName">
+              <button type="button" id="categoryAdd">Add</button>
+            </span>
+          </span>
+
+
+          <select id="bCategory">
+<!--              <option value="1">test</option>-->
+<!--              <option value="2">test1</option>-->
+          </select>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+      <div class="book_store" id="about">
+        <div class="head">
+          <h4>About Store</h4>
+        </div>
+        <form id="aboutUsForm">
+          <label for="titleAbout">Title</label>
+          <input type="text" id="titleAbout" />
+          <label for="imgUrlAbout">Book Image Url</label>
+          <input type="text"  id="imgUrlAbout"/>
+          <label for="descAboutUs">Description</label>
+          <textarea id="descAboutUs"></textarea>
+          <button>About info add</button>
+        </form>
+      </div>
+
+      <div class="join-us" id="join-us-nav-link joinus">
+        <h4>Join Us</h4>
+      </div>
+      <div class="table-responsive">
+        <table class="table">
+          <thead class="thead">
+          <tr>
+            <th>#</th>
+            <th>Full Name</th>
+            <th>Email</th>
+          </tr>
+          </thead>
+          <tbody id="join-tbody">
+          </tbody>
+        </table>
+      </div>
+      <!-- ? Books -->
+      <div class="book" id="book-table-nav-link">
+        <h4>Books</h4>
+      </div>
+
+      <div class="table-books">
+        <table class="books">
+          <thead class="books-thead">
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Author</th>
+            <th>Delete</th>
+          </tr>
+          </thead>
+          <tbody id="books-tbody">
+
+          </tbody>
+        </table>
+      </div>
+      <!-- ? Contact Us -->
+      <div class="contact-us" id="contact-us-nav-link contact">
+        <h4>Contact Us</h4>
+      </div>
+
+      <div class="contact-us-resp">
+        <table class="contact">
+          <thead class="contact-thead">
+          <tr>
+            <th>#</th>
+            <th>Full Name</th>
+            <th>Address</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+          </tr>
+          </thead>
+          <tbody id="contact-tbody">
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
 </body>
 </html>

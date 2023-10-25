@@ -1,216 +1,614 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
-/* Side bar  */
-
-.admin-panel {
+.admin {
     display: flex;
-    width: 100%; 
-    height: 100%;
-}
-
-.admin-panel .wrapper {
-    position: relative;
-    width: 353px;
-    flex-grow: 353px;
-}
-.side-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    background-color: #720418;
-    position: fixed;
-    height: 100%;
-    padding: 30px 0;
-
-}
- 
-.admin-panel .side-bar .logo {
-    margin: 35px;
-}
-.side-bar a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    text-align: center;
-    column-gap: 11px;
-}
-
-.side-bar a span {
-    line-height: 1.5;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: center;
-}
-
-.admin-panel .main-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: flex-end;
-}
-
-.admin-panel .main-content .admin-icons {
-    display: flex;
-    margin: 60px;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    column-gap: 3px;
-    justify-content: flex-end;
-
-    
-}
-.admin-panel .main-contect .content {
-    display: flex;
-    flex-direction: column;
-}
-
-/* .div-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-} */
-
-.admin-panel .main-contect .content .admin-icons {
-    display: flex;
-    background-color: black;
-    justify-content: flex-end;
-}
-
-
-h2 {
-    color: #333;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 196.187%;
-    margin: 0 0 26px 33px;
-}
-
-p {
-    color: #333;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    margin: 0 0 10px 33px;
-    line-height: 196.187%;
-}
-
-.section1 input {
-    border-radius: 34px;
-    border: 2px solid rgba(57, 31, 0, 0.48);
-    background: #FFF;
-    width: 395px;
-    height: 41px;
-    margin: 0 0 172px 33px;
-}
-
-.btn1 {
-    background-color: #FF8B00;
-    border: none;
-    border-radius: 18px;
-    color: white;
-    padding: 12px 16px;
-    font-size: 18px;
-    cursor: pointer; 
   }
- 
-.section2,
-.section3 {
-    display: flex;
-    flex-direction: column;
-}
-
-.section2 div,
-.section3 div {
-    display: flex;
-    flex-direction: column;
-    margin: 0 108px 161px 33px;
-    padding: 16px 30px;
-}
-
-.section2 #form1,
-.section3 #form2 {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.section2 #form1 label,
-.section3 #form2 label {
-    color: var(--Black, #030102);
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-bottom: 10px;
-}
-
-.section2 #form1 input,
-.section3 #form2 input, textarea {
-    border-radius: 10px;
-    border: 1px solid #E2E6EE;
-    background: #FFF;
-    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
-    padding: 8px 0;
-    margin-bottom: 24px;
-    height: 40px;
-
-}
-
-textarea {
-    height: 60px;
-}
-
-.section2 .btn2,
-.section3 .btn3 {
-    border-radius: 10px;
-    background: #FF8B00;
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    align-items: center;
-    height: 40px;
-    padding: 12px 24px;
-    border: none;
-}
-
-.section4 table,
-.section5 table,
-.section6 table {
-    margin: 0 667px 0 69px;
-}
-.section4 table .title,
-.section5 table .title,
-.section6 table .title {
+  .admin .wrapper {
+    top: 0;
+    left: 0;
+    /* width: 225px; */
+    padding: 20px 0;
+    transition: all 0.5s ease;
     background-color: #720418;
-    color: #FFF;
+    flex: 0.2;
+  }
+  .admin .wrapper .sidebar {
+    left: 0;
+    height: 100%;
     display: flex;
-    column-gap: 20px;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+  }
+  .admin .wrapper .sidebar .logo {
+    position: fixed;
+    width: 13%;
+  }
+  .admin .wrapper .sidebar .logo img {
+    width: 100%;
+  }
+  .admin .wrapper .sidebar .menu {
+    position: fixed;
+    margin-top: 120px;
+  }
+  .admin .wrapper .sidebar .menu ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .admin .wrapper .sidebar .menu ul li {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    text-align: justify;
+    cursor: pointer;
+  }
+  .admin .admin_panel {
+    width: 100%;
+    background: #fffaf5;
+    flex: 1;
+  }
+  .admin .admin_panel .hamburger {
+    display: none;
+  }
+  .admin .admin_panel .mobile_menu {
+    width: 100%;
+    height: 100vh;
+    background: #720418;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .admin .admin_panel .mobile_menu ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 50px;
+    row-gap: 35px;
+  }
+  .admin .admin_panel .mobile_menu ul li {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    text-align: justify;
+    cursor: pointer;
+  }
+  .admin .admin_panel .mobile_menu ul a {
+    color: rgba(3, 113, 156, 0.836);
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .admin .admin_panel .mobile_menu ul a:hover {
+    text-decoration: underline;
+  }
+  .admin .admin_panel .mobile_menu .mobile_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .admin .admin_panel .mobile_menu .mobile_header img {
+    margin-left: 15px;
+  }
+  .admin .admin_panel .mobile_menu .mobile_header h1 {
+    background: rgba(3, 113, 156, 0.836);
+    color: #fff;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  .admin .admin_panel .mobile_menu .mobile_header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  .admin .admin_panel .mobile_menu .mobile_header a i {
+    font-size: 30px;
+    color: #fff;
+  }
+  .admin .admin_panel #open:target {
+    display: block;
+  }
+  .admin .admin_panel .admin_icon {
+    width: 97%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
+  }
+  .admin .admin_panel .admin_icon i {
+    font-weight: 500;
+  }
+  .admin .admin_panel .admin_icon span {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .admin .admin_panel .search_section {
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .admin .admin_panel .search ::placeholder {
+    padding-left: 10px;
+  }
+  .admin .admin_panel .search_section .search_result {
+    width: 50%;
+    height: 80px;
     padding: 20px;
-    margin-bottom: 136px
-}
-
-th {
-    font-size: 18px;
-}
-
-.section5 table,
-.section6 table {
-    width: 70%;
-}
-
-.section5 table th,
-.section6 table th {
-    width: 15%;
-}
-
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+    overflow-y: scroll;
+    display: none;
+  }
+  .admin .admin_panel .search_section .search_result::-webkit-scrollbar-track {
+    border-radius: 6px;
+    padding: 2px 0;
+    background-color: #e4e4e4;
+  }
+  .admin .admin_panel .search_section .search_result::-webkit-scrollbar {
+    width: 8px;
+  }
+  .admin .admin_panel .search_section .search_result::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #720418;
+    border: none;
+  }
+  .admin .admin_panel .search_section .search_result .result {
+    display: flex;
+    column-gap: 7px;
+  }
+  .admin .admin_panel .search_section .search_result .result p {
+    font-family: sans-serif;
+  }
+  .admin .admin_panel .search_section .search_result .result p:hover {
+    text-decoration: underline;
+  }
+  .admin .admin_panel .search_section h2 {
+    font-family: sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .admin .admin_panel .search_section h3 {
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .admin .admin_panel .search_section .search {
+    display: flex;
+    column-gap: 5px;
+  }
+  .admin .admin_panel .search_section .search input {
+    width: 30%;
+    border-radius: 25px;
+    padding: 3px 0 3px 4px;
+    border: 2px solid rgba(57, 31, 0, 0.48);
+  }
+  .admin .admin_panel .search_section .search i {
+    color: #fff;
+    background-color: #ff8b00;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  .admin .admin_panel .book_info {
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .admin .admin_panel .book_info .head h4 {
+    font-family: sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .admin .admin_panel .book_info form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+    border-radius: 5px;
+  }
+  .admin .admin_panel .book_info form label {
+    margin-left: 40px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .admin .admin_panel .book_info form input {
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: 1px solid #e2e6ee;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+  }
+  .admin .admin_panel .book_info form select {
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: 1px solid #e2e6ee;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+  }
+  .admin .admin_panel .book_info form span {
+    width: 40%;
+    display: flex;
+    position: relative;
+  }
+  .admin .admin_panel .book_info form span > button {
+    width: 10%;
+    color: lime;
+    font-size: 30px;
+    background-color: #fff;
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 3px;
+    cursor: pointer;
+  }
+  .admin .admin_panel .book_info form span .catUp {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: none;
+  }
+  .admin .admin_panel .book_info form span .catUp button {
+    width: 95%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    background: #ff8b00;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+  }
+  .admin .admin_panel .book_info form textarea {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #e2e6ee;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+  }
+  .admin .admin_panel .book_info form button {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 7px 0;
+    border: none;
+    border-radius: 10px;
+    background: #ff8b00;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .admin .admin_panel .book_store {
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .admin .admin_panel .book_store .head h4 {
+    font-family: sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .admin .admin_panel .book_store form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+    border-radius: 5px;
+  }
+  .admin .admin_panel .book_store form label {
+    margin-left: 40px;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .admin .admin_panel .book_store form input {
+    margin: 0 auto;
+    width: 90%;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: 1px solid #e2e6ee;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+  }
+  .admin .admin_panel .book_store form textarea {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #e2e6ee;
+    box-shadow: 0px 4px 18px 0px rgba(158, 168, 189, 0.31);
+  }
+  .admin .admin_panel .book_store form button {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 7px 0;
+    border: none;
+    border-radius: 10px;
+    background: #ff8b00;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .admin .admin_panel .title {
+    font-family: sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    background-color: transparent;
+    margin-top: 100px;
+    margin-left: 30px;
+  }
+  .admin .admin_panel .table-wrap {
+    width: 30%;
+    overflow-x: auto;
+  }
+  .admin .admin_panel .join-us h4 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 196.187%;
+    margin-bottom: 1.625rem;
+    margin-left: 30px;
+    margin-top: 60px;
+  }
+  .admin .admin_panel table,
+  .admin .admin_panel td,
+  .admin .admin_panel th {
+    text-align: center;
+    font-size: 16px;
+  }
+  .admin .admin_panel table thead tr {
+    background-color: #720418;
+    color: #fff;
+  }
+  .admin .admin_panel table {
+    border-collapse: collapse;
+    width: 90%;
+    overflow: hidden;
+    margin-bottom: 60px;
+    margin-left: 30px;
+  }
+  .admin .admin_panel table tbody tr td {
+    border: 1px solid #ddd;
+  }
+  .admin .admin_panel th,
+  .admin .admin_panel td {
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .admin .admin_panel table tbody tr:nth-child(odd) {
+    background: rgba(180, 180, 180, 0.2588235294);
+    color: #000;
+    /* font-weight: 300; */
+  }
+  .admin .admin_panel .box-wrap {
+    padding: 0px 16px;
+  }
+  .admin .admin_panel table tbody tr td::last-child {
+    background-color: red;
+  }
+  .admin .admin_panel .table-responsive {
+    width: 60%;
+  }
+  .admin .admin_panel .book h4 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 196.187%;
+    margin-bottom: 1.625rem;
+    margin-left: 30px;
+  }
+  .admin .admin_panel .contact-us h4 {
+    color: #000;
+    font-family: sans-serif;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 196.187%;
+    margin-bottom: 1.625rem;
+    margin-left: 30px;
+  }
+  
+  @media only screen and (max-width: 390px) {
+    .admin {
+      display: flex;
+    }
+    .admin .wrapper {
+      display: none;
+    }
+    .admin .admin_panel .admin_icon {
+      display: none;
+    }
+    .admin .admin_panel .hamburger {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 15px;
+    }
+    .admin .admin_panel .hamburger img {
+      margin-left: 14px;
+    }
+    .admin .admin_panel .hamburger i {
+      font-size: 30px;
+      color: #000;
+    }
+    .admin .admin_panel .search_section {
+      width: 80%;
+    }
+    .admin .admin_panel .search_section .search input {
+      width: 80%;
+    }
+    .admin .table-responsive {
+      width: 100%;
+      overflow-x: scroll;
+    }
+    .admin .table-books {
+      overflow-x: scroll;
+    }
+    .admin .contact-us-resp {
+      overflow-x: scroll;
+    }
+  }
+  @media (min-width: 391px) and (max-width: 500px) {
+    .admin {
+      display: flex;
+    }
+    .admin .wrapper {
+      display: none;
+    }
+    .admin .admin_panel .admin_icon {
+      display: none;
+    }
+    .admin .admin_panel .hamburger {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 15px;
+    }
+    .admin .admin_panel .hamburger img {
+      margin-left: 14px;
+    }
+    .admin .admin_panel .hamburger i {
+      font-size: 30px;
+      color: #000;
+    }
+    .admin .admin_panel .search_section {
+      width: 80%;
+    }
+    .admin .admin_panel .search_section .search input {
+      width: 70%;
+    }
+    .admin .table-responsive {
+      width: 100%;
+      overflow-x: scroll;
+    }
+    .admin .table-books {
+      overflow-x: scroll;
+    }
+    .admin .contact-us-resp {
+      overflow-x: scroll;
+    }
+  }
+  @media (min-width: 501px) and (max-width: 768px) {
+    .admin {
+      display: flex;
+    }
+    .admin .wrapper {
+      display: none;
+    }
+    .admin .admin_panel .admin_icon {
+      display: none;
+    }
+    .admin .admin_panel .hamburger {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 15px;
+    }
+    .admin .admin_panel .hamburger img {
+      margin-left: 14px;
+    }
+    .admin .admin_panel .hamburger i {
+      font-size: 30px;
+      color: #000;
+    }
+    .admin .admin_panel .search_section {
+      width: 80%;
+    }
+    .admin .admin_panel .search_section .search input {
+      width: 50%;
+    }
+    .admin .table-responsive {
+      width: 100%;
+      overflow-x: scroll;
+    }
+    .admin .table-books {
+      overflow-x: scroll;
+    }
+    .admin .contact-us-resp {
+      overflow-x: scroll;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    .admin .admin_panel {
+      width: 100%;
+      overflow-x: scroll;
+    }
+    .admin .admin_panel .search_section {
+      width: 80%;
+    }
+    .admin .admin_panel .search_section .search {
+      display: flex;
+      column-gap: 5px;
+    }
+    .admin .admin_panel .search_section .search input {
+      width: 50%;
+    }
+  }
+  @media (min-width: 993px) and (max-width: 1125px) {
+    .admin .admin_panel {
+      overflow-x: scroll;
+    }
+  }
+  @media (min-width: 1126px) {
+    .admin .admin_panel {
+      overflow-x: scroll;
+    }
+  }
+  
+  
