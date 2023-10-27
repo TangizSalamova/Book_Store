@@ -19,7 +19,7 @@ document.getElementById("login").addEventListener("submit", e=>{
         const loginAcc = snapshot.val();
         if(usernameInput.value === loginAcc.username && passwordInput.value === loginAcc.password){
             sessionStorage.setItem("log", JSON.stringify(loginAcc));
-            location.replace("../assets/Pages/adminPanel.html");
+            location.replace("./adminPanel.html");
         }else{
             document.getElementById("login").insertAdjacentHTML("beforeend",
                 `<div class="alert alert-danger" role="alert" id="dangerZone">

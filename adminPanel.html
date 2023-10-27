@@ -4,34 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel | Library Book Store</title>
-    <link rel="stylesheet" href="../Font/font.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/adminpanel.css">
+    <link rel="stylesheet" href="./assets/Font/font.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/adminpanel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <script src="../js/main.js" type="module" defer></script>
+    <script src="./assets/js/main.js" type="module" defer></script>
 </head>
 <body>
   <div class="admin">
     <div class="wrapper">
       <div class="sidebar">
         <div class="logo">
-          <img src="../images/Logo.png" alt="" />
+          <img src="./assets/images/Logo.png" alt="" />
         </div>
         <div class="menu">
           <ul id="navMenu">
             <li>
-              <a href="#home"><img src="../images/T-admin-panel-photo.png" alt="" /></a>Home</li>
+              <a href="#home"><img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>Home</li>
             <li>
-              <a href="#books"><img src="../images/T-admin-panel-photo.png" alt="" /></a>Books</li>
+              <a href="#books"><img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>Books</li>
             <li>
-              <a href="#about"><img src="../images/T-admin-panel-photo.png" alt="" /></a>About</li>
+              <a href="#about"><img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>About</li>
             <li>
-              <a href="#joinus"><img src="../images/T-admin-panel-photo.png" alt="" /></a>Join Us</li>
+              <a href="#joinus"><img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>Join Us</li>
             <li>
-              <a href="#contact"><img src="../images/T-admin-panel-photo.png" alt="" /></a>Contact</li>
+              <a href="#contact"><img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>Contact</li>
             <li  class="logOut">
-              <a href="/index.html">
-                  <img src="../images/T-admin-panel-photo.png" alt="" /></a>Logout</li>
+              <a href="./index.html">
+                  <img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>Logout</li>
           </ul>
         </div>
       </div>
@@ -44,16 +44,16 @@
 
       <nav class="mobile_menu" id="open">
         <div class="mobile_header">
-          <img src="../image/T-admin-panel-logo.png" alt="" />
+          <img src="./assets/images/T-admin-icons.png" alt="" />
           <a href="../pages/"><i class="fa-solid fa-xmark"></i></a>
         </div>
         <ul>
-          <li><img src="../image/T-admin-panel-photo.png" alt="" /><a href="#home"></a>Home</li>
-          <li><a href="#books"><img src="../image/T-admin-panel-photo.png" alt="" /></a>Books</li>
-          <li><a href="#about"><img src="../image/T-admin-panel-photo.png" alt="" /></a>About</li>
-          <li><a href="#joinus"><img src="../image/T-admin-panel-photo.png" alt="" /></a>Join Us</li>
-          <li><a href="#contact"><img src="../image/T-admin-panel-photo.png" alt="" /></a>Contact</li>
-          <li class="logOut"><a href="./admin-login.html"><img src="../image/T-admin-panel-photo.png" alt=""/></a>Logout</li>
+          <li><img src="./assets/images/T-admin-panel-photo.png" alt="" /><a href="#home"></a>Home</li>
+          <li><a href="#books"><img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>Books</li>
+          <li><a href="#about"><img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>About</li>
+          <li><a href="#joinus"><img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>Join Us</li>
+          <li><a href="#contact"><img src="./assets/images/T-admin-panel-photo.png" alt="" /></a>Contact</li>
+          <li class="logOut"><a href="./index.html"><img src="./assets/images/T-admin-panel-photo.png" alt=""/></a>Logout</li>
         </ul>
       </nav>
 
@@ -109,7 +109,9 @@
           <input type="text"  id="Burl" />
           <label for="dscrptn">Description</label>
           <textarea id="dscrptn"></textarea>
-          <span><label for="bCategory">Book Category</label> <button type="button" id="showCategory">+</button>
+          <span>
+            <label for="bCategory">Book Category</label> 
+            <button type="button" id="showCategory">+</button>
             <span class="catUp">
               <label for="categoryName">Add Category</label>
               <input type="text" id="categoryName">
@@ -118,10 +120,7 @@
           </span>
 
 
-          <select id="bCategory">
-<!--              <option value="1">test</option>-->
-<!--              <option value="2">test1</option>-->
-          </select>
+          <input id="bCategory">
           <button type="submit">Add</button>
         </form>
       </div>
@@ -170,7 +169,6 @@
             <th>Description</th>
             <th>Category</th>
             <th>Author</th>
-            <th>Delete</th>
           </tr>
           </thead>
           <tbody id="books-tbody">
